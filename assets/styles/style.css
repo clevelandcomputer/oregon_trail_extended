@@ -1,0 +1,11 @@
+* {
+    box-sizing: border-box;
+}
+.people {
+    text-align: center;
+    width: 300px;
+    height: auto; 
+    float: left;
+    padding: 5px 0 5px 0;
+    
+}
