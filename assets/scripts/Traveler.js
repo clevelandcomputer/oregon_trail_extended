@@ -10,19 +10,27 @@ class Traveler {
        return this.food = this.food + 2
     }
     eat() {
-        if(this.food > 1) {
-            this.food = this.food -1
-            return
-        }
-
-        if(this.food === 1) {
+        
+        if(this.food >= 1) {
             this.food = this.food - 1
             return
-        }
-        if(this.food === 0) {
+        } else {
             this.isHealthy = false
             return
         }
+        // if(this.food > 1) {
+        //     this.food = this.food -1
+        //     return
+        // }
+
+        // if(this.food === 1) {
+        //     this.food = this.food - 1
+        //     return
+        // }
+        // if(this.food === 0) {
+        //     this.isHealthy = false
+        //     return
+        // }
     }
 
 } 
@@ -49,21 +57,28 @@ class Hunter extends Traveler {
         return this.food = this.food + 5
     }
     eat() {
-        if(this.food > 2) {
+        if(this.food >= 2) {
             this.food = this.food - 2
             return
-        }
-    
-        if(this.food === 2) {
-            this.food = this.food - 2
-            return
-        }
-
-        if(this.food === 1 || 0) {
+        } else {
             this.food = 0
             this.isHealthy = false
-            return
         }
+        // if(this.food > 2) {
+        //     this.food = this.food - 2
+        //     return
+        // }
+    
+        // if(this.food === 2) {
+        //     this.food = this.food - 2
+        //     return
+        // }
+
+        // if(this.food === 1 || 0) {
+        //     this.food = 0
+        //     this.isHealthy = false
+        //     return
+        // }
     }
     giveFood(traveler, numOfFoodUnits) {
         if(this.food > numOfFoodUnits) {
